@@ -28,11 +28,15 @@
 
         .navbar-nav .nav-link {
             color: black;
-            border: 3px solid rgb(35, 113, 192);
             border-radius: 5px;
-            margin-right: 20px;
+            margin-right: 20px; /* 25px margin between each link */
         }
 
+        /* Navbar text hover color */
+        .navbar-nav .nav-link:hover {
+            color: #FFD700;
+            font-weight: 600;
+        }
         button {
             height: 55px;
             width: 100px;
@@ -97,6 +101,13 @@
             bottom: 1px;
             left: calc(50% - 60px);
         }
+        .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #FFD700; /* Yellow text color */
+    font-weight: 500;
+    background-color: transparent; /* Ensure background is transparent */
+    border: none; /* Remove any borders if present */
+}
 
         .section-title h2::after {
             content: "";
@@ -131,13 +142,6 @@
             border: none;
             background-color: skyblue;
         }
-        .navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-    color: #FFD700; /* Yellow text color */
-    font-weight: 500;
-    background-color: transparent; /* Ensure background is transparent */
-    border: none; /* Remove any borders if present */
-}
 
         .navbar-toggler-icon {
             color: white;
@@ -164,6 +168,24 @@
         .center-text {
             text-align: center;
         }
+        @media (max-width: 993px) {
+            body {
+                font-size: 14px; /* Adjust base font size for readability */
+            }
+            
+            .navbar {
+                padding: 10px; /* Reduce navbar padding */
+            }
+            
+            .navbar-brand {
+                font-size: 18px; /* Adjust brand size */
+            }
+        
+            .centered-container {
+                width: 90%; /* Make it wider for smaller screens */
+            }
+        }
+        
     </style>
 </head>
 <body>
@@ -225,13 +247,14 @@
                     <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">Well, since this article is on the Internet, you may be reading this from any part of the world. I being a guy, my answer for that question will be a simple no. I am sure that almost every other guy on this planet would answer the same. I don’t know what a girl’s answer will be if you are reading this from the U.S. or Europe but I do know what will be the answer of most of Indian girls to that question. It will be either an emphatic or a hypocritical “yes”. It is perhaps one of the cliched lies ever told. A majority of girls whom I have observed including a few guys answer the above question with a “yes”. I don’t know if they speak the truth or not, but I am very certain that they have to change their mind set. If your answer for the above question is a “no”, then you are psychologically and physiologically fine. You can read further if you want to but I suggest that you don’t. If your answer for the above question is a “yes”, I compel you to read on.</p>
                     <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">I will now bring out some biological issues about physical beauty of individuals which have scientific validity.Satoshi Kanazawa PhD, a reader at London School of Economics, says that attractive people are genetically and developmentally healthier. He is an authoritative author who has done quite a commendable research in evolutionary biology. Though I am personally a creationist, I do agree with the results of this particular research. I have personally observed that kids of unattractive parents to be mentally and physically less competent to kids begot by attractive parents. It is not my intention to offend anyone; I just want to throw some insight on this issue. You can Google the above mentioned author’s name and read his articles. He says three factors define physical beauty, that is, facial attractiveness. There are three main features that characterize beautiful faces: the geometric feature of bilateral symmetry, the mathematical feature of averageness, and the biological feature of secondary sexual characteristics.</p>
                     <i style="display:flex; justify-content:flex-start">I just want to give an example to the second feature mentioned above. I randomly found this photo in the Internet. This is a typical example of poor averageness of facial features.</i>
-                    <img src="gif.png" alt="logo" style="display:flex; justify-content:flex-start">
+                    <img src="gif.png" alt="logo"class="img-fluid" style="display:flex; justify-content:flex-start">
                     <i style="display:flex; justify-content:flex-start;">This gentleman’s face seems ‘ugly’ because of the size of his nose is disproportionately big when compared to his other facial feature, namely, eyes and mouth.</i><br>
                     <h6 style="text-align:justify;line-height:1.6;margin-bottom:10px;">There was considerable research done on this particular issue and almost all of the conclusions were more or less the same. Almost all of the results showed that if the two individuals of the opposite gender having a strong sexual attraction towards each other tend to beget genetically superior offspring.<br> I have just begun to enter the kernel of this article. The very purpose why I wrote this article will unveil in the following lines. In conservative societies, present in India, China and other parts of Asia, marriage between a guy and a girl is still arranged by their parents and kin. Though in most marriages, the person to be wed decides his or her partner, the profile from which they have to choose is quite narrow because of social constrains. Economic status, religion, caste and other factors come into play in choosing the life partner of a person. Though I am not against any of the above mentioned factors, the fact that irks me is this: almost no or very less importance is given to how much the guy and girl to be wed are PHYSICALLY attracted to each other.</h6>
                         <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">Not only this happens in arranged marriages, but there are people all over the world, who deliberately overlook the physical attraction factor when choosing their life partners. This, in my personal opinion, is a huge error for more than one reason. As far as I have observed, women tend to make this mistake. When I took effort to find out why, I came to know that they tend to compromise their desire of good looking men for more practical requirements of marriage. They go for men with suitable character or men with a lot of money even if they are not that much physically attractive. In one manner, I condemn this very much because the man who gets married to a woman who is not sufficiently physically attracted to him, is at a receiving end. Such marriages become unstable because of the obvious reasons. Man, who is sexually more demanding (this is an arguable statement in itself), gets frustrated when he does not get to have physical relation as much as he wants. He gets totally pissed off when he finds out that she is not attracted, and never has been attracted to him as much as he thought or wants.I can’t generalize the above statement because a whole lot depends on that man’s sex drive. Women must therefore be true to themselves and merciful to the guy they are choosing to end up with for the good of human gene pool.I don’t want to get too deep into the issue of how much a man’s sex drive depends on the mutual interest shown by his woman, since it does not pertain to the title of this article. Nevertheless, I guess I have thrown some light into the whole issue I was intending to address. Therefore, I will wind up this article now. Well, to all the women out there who want to end up with rich guys, have some heart: spare the man and the unborn kids!</p>
         </div>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
