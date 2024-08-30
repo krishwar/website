@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            background: #fafafa;
+        }
+         
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+            background-color:white;
+            font-weight: 700;
+        }
+
+        .navbar-nav .nav-link {
+            color: black;
+            border-radius: 5px;
+            margin-right: 20px; /* 25px margin between each link */
+        }
+
+        /* Navbar text hover color */
+        .navbar-nav .nav-link:hover {
+            color: #FFD700;
+            font-weight: 600;
+        }
+        button {
+            height: 55px;
+            width: 100px;
+            background-color: rgba(216, 139, 24, 0.678);
+            color: white;
+            font-weight: 400;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 45px;
+        }
+
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        h5 {
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        section {
+            padding: 60px 0;
+            overflow: hidden;
+        }
+
+        .section-title {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            position: relative;
+            color: #45505b;
+        }
+
+        .section-title h2::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 120px;
+            height: 1px;
+            background: #ddd;
+            bottom: 1px;
+            left: calc(50% - 60px);
+        }
+        .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #FFD700; /* Yellow text color */
+    font-weight: 500;
+    background-color: transparent; /* Ensure background is transparent */
+    border: none; /* Remove any borders if present */
+}
+
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 40px;
+            height: 3px;
+            background: #0563bb;
+            bottom: 0;
+            left: calc(50% - 20px);
+        }
+
+        .section-title p {
+            margin-bottom: 0;
+        }
+
+        button:hover {
+            background-color: rgb(15, 103, 147);
+            transform: scale(1.1);
+            font-weight: 500;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #FFD700;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+        }
+        
+        .navbar-toggler {
+            border: none;
+            background-color: skyblue;
+        }
+
+        .navbar-toggler-icon {
+            color: white;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .wrapper h1 {
+            font-size: 2.5em;
+            padding: 25px 0;
+            text-align: center;
+            font-weight: 500;
+        }
+        h6{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="ZRAE-global-removebg.png" href="index.html" alt="Logo" style="height: 70px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><span>H</span>OME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><span>A</span>BOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html"><span>S</span>ERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consultancy.html"><span>C</span>ONSULTANCY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog.html"><span>B</span>LOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><span>C</span>ONTACT US</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <div class="col-4">
+                        <div class="submit">
+                          <button type="button" id="form_buttons" onclick="window.location.href='enquire.html'">Enquire</button>
+                        </div>
+                      </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="about" class="about">
+        <div class="wrapper">
+            <div class="section-title"><br>
+                <h2 style="margin-bottom: 30px;">Is the Universe Digital or Analog?</h2>
+                <!-- Center the text below -->
+                <p class="center-text">by admin | Jan 18, 2019 | blog</p><br>
+                <h6 style="text-align:justify;line-height:1.6;margin-bottom:10px;">Is the world digital or analog? Well, first of all, let me make clear to the readers on what this question means. Though most of you reading this already know what this question means, I would like to through some light on the meaning of this question for the sake of those who can’t understand. We know that the fundamental constituents of this universe are matter and energy. Anything tangible will either be matter or energy. For instance, water is a matter in liquid state. The radio wave that our mobiles receive is energy. It was Albert Einstein’s ground breaking equation, E=mc2 that showed us that all matter is also made up of energy. This means that everything tangible in the universe is energy. Anything matter is just a manifestation of energy at an ultra high speed. The speed is so high that it is not humanly perceivable to feel it as energy. A lot of resource is available about that topic in the internet and in YouTube. The question is whether the smallest known constituent of the tangible universe is digital or analog. Digital is something countable. The number of electrons in an atom is countable. The objects being counted are discrete. It can be digitized. Analog is something which not discrete. It cannot be digitized naturally. For example, the volume of air in a closed bottle is measurable, but it is not discrete, that it cannot be counted. It is because it is not digitized. Thus meaning of the question “Is the universe digital or analog?” is whether the smallest constituent of the tangible universe digital or analog.<br>
+                        <br>
+                    I googled this topic and found just one relevant article in the below link:http://www.st-andrews.ac.uk/~www_pa/Scots_Guide/iandm/part12/page1.html
+                    <br>
+                    I did not search meticulously, so anyone patiently wading through the Internet may find lots of relevant articles on this topic.<br>
+                    <br>
+                    To proceed further, it would be good to summarize the content of the above article in a gist. According to the author, both “digital” and “analog” are mere idealizations of a real physical quantity. That is, in the real world it is impossible to term any quantity as “digital” or “analog”. I personally agree with that notion.
+                    <br>
+                    The concept of idealization of the above terms can be explained by considering a simple electrical impulse signal. In theory, an impulse signal is one which has no time duration. Mathematically, the time duration of the impulse signal tends to zero. This is practically impossible. That is, the impulse signal has finite time duration. When zoomed in time scale, we can see that the impulse signal has a finite time duration that is very small compared to the rest of the signal’s time duration in that particular system. An example is given below to illustrate. Consider a typical impulse signal in real world with practically zero time duration as shown below. Its time duration appears to be zero when observed from the below graph.</h6><br>
+                    <img src="graph.png" alt="logo">
+                <h6 style="text-align:justify;line-height:1.6;margin-bottom:10px;">When zoomed in, the impulse signal has an observable finite time duration. In this case the impulse signal has time duration of 0.001 seconds. This time duration is negligible when compared to time duration of one second, therefore in a system where the smallest unit for an electrical signal is one second, a typical impulse signal will have a time duration of 0.001 seconds.</h6>
+                <img src="graph1.png" alt="logo">
+                 <h6 style="text-align:justify;line-height:1.6;margin-bottom:10px;">The zoomed in impulse signal can again be considered as a half cycle of a sine wave with very high amplitude.
+                    On the other hand, a sine wave when taken and analyzed by zooming into its amplitude versus time graph, its variation can be digitized. That means, the smallest change in the amplitude with respect to time can be counted if the unit taken to measure that amplitude is small enough.
+                    <br>
+                    Thus, the concept of “digital and analog” is mere idealizations. There is no absolute digital or analog signal in real world.
+                    <br>
+                    Matter exists in the smallest stable form in reality as quarks. Quarks are the building unit of protons and neutrons, which make up an atom. A particle smaller than quark which can exists in real world is not yet been found. Researchers believe the answer can be found if experiments conducted at L.C.H. (Large Hadron Collider) in Geneva is successful. On the other hand, hypothetically, a particle can exist in nature smaller than a quark. For that reason, hypothetically, a particle can exist in nature smaller than the smallest particle that can ever be found by man.
+                    <br>
+                    As said in the beginning of this article, it was established by modern science that all matter is a stable manifestation of energy. The smallest unit of energy that has been defined by contemporary science is a “photon”. The energy of a photon is 4 x 10-19 joule. Again, hypothetically, there can be a smaller unit of energy than the smallest unit of energy that can ever be found by man.
+                    <br>
+                    Thus one intelligent and acceptable way to define what is “digital” and “analog” is by stating that any amount of matter or energy as “digital” if it can be expressed as a whole number sum of smallest unit of matter or energy. For example, since the smallest unit of energy is photon, so if a measured amount of radiation has the smallest variation as one photon, it can be considered a “digital” reading or “digital” variation. A set of five readings of a particular radiation measurement in unit of photons is as follows: 5, 8, 12, 7, and 10. Here the readings or variation can be termed “digital”. If the readings are 8.6, 7.3 and 4.1 and so on, then the reading or variation can be termed “analog”.
+                    <br>
+                    To put it more simply, it depends upon the unit that we assume to quantize a given physical quantity with respect to another physical quantity. For instance, if the electrical amplitude is changes within the smallest time duration defined for that system, it is an analog system. If the amplitude does not vary within the smallest time duration defined for that system, it is a digital system. Thus an analog system can be converted into a digital system by reducing the unit of time duration small enough. A digital system can be converted into an analog system by increasing the unit of time duration.<br>This can be easily explained with the below example. Consider a sine wave with time duration of 4 seconds. It means it takes 4 seconds to complete one cycle or oscillation. This sine wave is an analog signal because it varies smoothly with time. The smallest unit of time defined is one second in the graph and since the amplitude is not constant in the smallest duration of time(1 sec), the signal is defined as analog signal. If the same signal is zoomed in and if observed in very small time duration, the variation becomes constant over small duration of time. If the time duration considered is small enough, and if that time duration is made the unit of the graph, the signal becomes a digital signal. In this case if the signal is zoomed enough and a very small time duration of 0.02 second is taken as the unit, then the signal becomes a digital signal. This is because when 0.02sec is taken as the unit, then the amplitude variation within that time duration through the graph becomes constant.</h6>
+                    <img src="graph2.png" alt="logo">
+                    <br>
+                        <h6 style="text-align:justify;line-height:1.6;margin-bottom:10px;">It should be understood that the concept of digital and analog are idealizations, but once a system has been characterized and predefined in a particular manner, adhering to that specifications is considered the best.<br>
+
+                            To answer the question asked first “Is the world digital or analog?” is now quite easy. The world is neither analog nor digital. The real world exists in such an intricate form that it is both analog and digital at the same time or it is neither analog nor digital. “Analog” and “Digital” are mere concepts of idealizations for our convenience.</h6>
+        </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

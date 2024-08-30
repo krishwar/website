@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact_us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+         
+ *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+ }
+
+ body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+        span {
+            font-size: 22px;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+            background-color: white;
+            font-weight: 700;
+        }
+        .navbar-nav .nav-link {
+            color: black;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        /* Navbar text hover color */
+        .navbar-nav .nav-link:hover {
+            color: #FFD700;
+            font-weight: 600;
+        }
+        .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #FFD700; /* Yellow text color */
+    font-weight: 500;
+    background-color: transparent; /* Ensure background is transparent */
+    border: none; /* Remove any borders if present */
+}
+        /* Logo */
+        .navbar-brand img {
+            height: 50px;
+        }
+        
+        /* Adjust menu button (hamburger) position */
+        .navbar-toggler {
+            border: none;
+            background-color: skyblue;
+        }
+        .navbar-toggler-icon {
+            background-color: white;
+        }
+
+        section {
+            padding: 60px 0;
+            overflow: hidden;
+            margin-top: 50px; /* Reduced margin to minimize the gap */
+        }
+
+        .section-title {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            position: relative;
+            color: #45505b;
+        }
+
+        .section-title h2::before,
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            display: block;
+            background: #ddd;
+        }
+
+        .section-title h2::before {
+            width: 120px;
+            height: 1px;
+            bottom: 1px;
+            left: calc(50% - 60px);
+        }
+
+        .section-title h2::after {
+            width: 40px;
+            height: 3px;
+            bottom: 0;
+            left: calc(50% - 20px);
+            background: #0563bb;
+        }
+
+        .section-title p {
+            margin-bottom: 0;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center; /* Center vertically */
+        }
+
+        .about-content img {
+            max-width: 100%; /* Ensure image is responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        @media(max-width:993px) {
+            .navbar-nav .nav-link {
+                margin-right: 10px;
+            }
+        }
+        @media(max-width: 993px) {
+            .navbar-nav .nav-link {
+                margin-right: 10px;
+            }
+        
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        
+            .about-content .col-6 {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        
+            iframe {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        /* Enquire button styles */
+        .enquire-button {
+            height: 55px;
+            width: 100px;
+            background-color: rgb(15, 103, 147); 
+            color: white;
+            font-weight: 400;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 45px;
+        }
+    
+        /* Hover effect for the button */
+        .enquire-button:hover {
+            background-color: rgb(0, 76, 153);
+            transform: scale(1.1);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="ZRAE-global-removebg.png" href="index.html" alt="Logo" style="height: 70px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><span>H</span>OME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><span>A</span>BOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html"><span>S</span>ERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consultancy.html"><span>C</span>ONSULTANCY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html"><span>B</span>LOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html"><span>C</span>ONTACT US</a>
+                    </li>
+                </ul>
+                <div class="navbar-nav">
+                    <button type="button" id="form_buttons" class="enquire-button" onclick="window.location.href='enquire.html'">Enquire</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <section id="about" class="about">
+        <div class="wrapper">
+            <div class="section-title">
+                <h2 style="margin-bottom: 30px;">Contact Us</h2>
+                <p>ZRAE delivers the best in class software, hardware, and integrated solutions for your industrial needs.</p><br>
+            </div>
+            <div class="container about-content">
+                <div class="row">
+                    <div class="col-6">
+                        <h5><i class="fa-solid fa-phone"></i> &nbsp;Phone :&nbsp;+91 8148937880 &nbsp;
+                        +91 9790797273 </h5><br><br>
+                        <h5><i class="fa-solid fa-envelope"></i>&nbsp;<b>E-mail :</b>&nbsp; info@zrae.global</h5> <br><br>
+                       <h5><i class="fa-solid fa-location-dot"></i>&nbsp;<b>Address :</b>&nbsp; 25, 2nd Avenue, Akshya Colony,
+                        Mugappair, Chennai – 600037( Landmark – Behind DAV Boys School and Company Owned Bharat Petroleum Bunk ) </h5>
+                    </div>
+                    <div class="col-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.5315442773842!2d80.18258976947676!3d13.091188905453222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5263f7426a7e21%3A0x4e62d1af5e878cce!2sZion%20Robotics!5e0!3m2!1sen!2sus!4v1724946539433!5m2!1sen!2sus" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            background: #fafafa;
+        }
+         
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+            background-color:white;
+            font-weight: 700;
+        }
+
+        .navbar-nav .nav-link {
+            color: black;
+            border: 3px solid rgb(35, 113, 192);
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        button {
+            height: 55px;
+            width: 100px;
+            background-color: rgba(216, 139, 24, 0.678);
+            color: white;
+            font-weight: 400;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 45px;
+        }
+
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        h5 {
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        section {
+            padding: 60px 0;
+            overflow: hidden;
+        }
+
+        .section-title {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            position: relative;
+            color: #45505b;
+        }
+
+        .section-title h2::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 120px;
+            height: 1px;
+            background: #ddd;
+            bottom: 1px;
+            left: calc(50% - 60px);
+        }
+
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 40px;
+            height: 3px;
+            background: #0563bb;
+            bottom: 0;
+            left: calc(50% - 20px);
+        }
+
+        .section-title p {
+            margin-bottom: 0;
+        }
+
+        button:hover {
+            background-color: rgb(15, 103, 147);
+            transform: scale(1.1);
+            font-weight: 500;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #FFD700;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+        }
+        
+        .navbar-toggler {
+            border: none;
+            background-color: skyblue;
+        }
+        .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #FFD700; /* Yellow text color */
+    font-weight: 500;
+    background-color: transparent; /* Ensure background is transparent */
+    border: none; /* Remove any borders if present */
+}
+
+        .navbar-toggler-icon {
+            color: white;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .wrapper h1 {
+            font-size: 2.5em;
+            padding: 25px 0;
+            text-align: center;
+            font-weight: 500;
+        }
+        h6{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="ZRAE-global-removebg.png" href="index.html" alt="Logo" style="height: 70px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><span>H</span>OME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><span>A</span>BOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html"><span>S</span>ERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#consultancy"><span>C</span>ONSULTANCY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html"><span>B</span>LOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><span>C</span>ONTACT US</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <div class="col-4">
+                        <div class="submit">
+                          <button type="button" id="form_buttons" onclick="window.location.href='enquire.html'">Enquire</button>
+                        </div>
+                      </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="about" class="about">
+        <div class="wrapper">
+            <div class="section-title"><br>
+                <h2 style="margin-bottom: 30px;">eugenical compatibility</h2>
+                <!-- Center the text below -->
+                <p class="center-text">by admin | Jan 18, 2019 | blog</p><br>
+            
+                <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">Coming from a rather conservative Indian family, I was struggling with my conviction to write this article for quite a long time. Even before I began to write this, I realized that I may have to touch a lot of tabooed and controversial issues which will offend a majority of people who will read this. Nevertheless, if you choose to be open-minded, you will be offending a lot of people beginning with yourself. Having said that let me plunge straight away into the article.<br><br>
+                <b>What the heck is “Eugenical compatibility”?</b></p>
+                <h6 style="text-align:justify;line-height:1.6;margin-bottom:10px;">When was the last time you gaped at an awesome looking person of the opposite sex in a restaurant or on the street, who obviously paid no attention to you? Last week? Yesterday? Today? Never feel bad. You are one among the millions who face that situation, as often as you do. Never lose heart. You are yet meet the person with the right genetic combination, who will bump into you, walking out of a café and stand equally awestruck at you as you will be at him or her.I still have not touched what “Eugenical compatibility” means. Now I will. Wikipedia defines “Eugenics” as </h6>
+                <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">“applied science or the bio-social movement which advocates the use of practices aimed at improving the genetic composition of a population.” In layman’s term, the phrase “Eugenical compatibility” refers to the mutual amorous attraction between two individuals of the opposite sex. Well if you say that to a biologist, he or she will definitely laugh, but that definition is more than enough for us to proceed with the rest of the article. The meaning that this phrase construes refers only to the physical attraction, which in most cases, happens in the very first sight. It is scientifically proved that progenies of eugenically compatible pairs are genetically superior.</p>
+                    <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">I googled “Eugenical compatibility” before I started writing this article. I did not find any relevant article except one. I lost the link and was not able to find it again. I clearly remember the gist of the content though. It was an excerpt from a commentary of George B. Shaw’s take on modern day eugenics. George B. Shaw had suggested a demo-graphical society wherein the institution of marriage should be abolished. He proposed that people who are sexually attracted to each other should be allowed to reproduce. He had proposed that sex within wedlock should be abolished so that “eugenically compatible” pairs can reproduce and birth children who will be genetically superior. He said that an institution similar to marriage where “personally compatible” pairs can live in a family setup as husband and wife. The ultimate goal of the above explained society was to create a genetically superior race of human beings. When George B. Shaw said “personally compatible” pairs, he referred to a couple who will get along socially with each other. This means they have emotional attachments towards each other and their relationship is exactly the same as pertaining within marriage except that they don’t have sexual relationship.</p>
+                    <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">To me the whole idea seemed quite funny and I am sure most of you reading this will feel the same. I don’t know what you might be thinking after reading so far. I am sure almost everyone baring a few would disagree with George B. Shaw. I want to make clear at this point that even my stand is the same: I don’t agree with George B. Shaw.</p>
+                    <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">Nevertheless, the demised intellect has given us some very reasonable notions to reflect upon. From this point in my article, I would like to pour out my raw thought train on various issues like relationship, sex, marriage from a scientific perspective.
+                    I don’t know exactly where to start from, so I will start from where Late Mr George B. Shaw left. I would like to pose this question to you:</p>
+                    <i style="display:flex; justify-content:flex-start"><b> If you have all the qualities you expect in a person of opposite gender except his or her looks, which are totally loathsome, will you fall for that person?</b></i>
+                    <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">Well, since this article is on the Internet, you may be reading this from any part of the world. I being a guy, my answer for that question will be a simple no. I am sure that almost every other guy on this planet would answer the same. I don’t know what a girl’s answer will be if you are reading this from the U.S. or Europe but I do know what will be the answer of most of Indian girls to that question. It will be either an emphatic or a hypocritical “yes”. It is perhaps one of the cliched lies ever told. A majority of girls whom I have observed including a few guys answer the above question with a “yes”. I don’t know if they speak the truth or not, but I am very certain that they have to change their mind set. If your answer for the above question is a “no”, then you are psychologically and physiologically fine. You can read further if you want to but I suggest that you don’t. If your answer for the above question is a “yes”, I compel you to read on.</p>
+                    <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">I will now bring out some biological issues about physical beauty of individuals which have scientific validity.Satoshi Kanazawa PhD, a reader at London School of Economics, says that attractive people are genetically and developmentally healthier. He is an authoritative author who has done quite a commendable research in evolutionary biology. Though I am personally a creationist, I do agree with the results of this particular research. I have personally observed that kids of unattractive parents to be mentally and physically less competent to kids begot by attractive parents. It is not my intention to offend anyone; I just want to throw some insight on this issue. You can Google the above mentioned author’s name and read his articles. He says three factors define physical beauty, that is, facial attractiveness. There are three main features that characterize beautiful faces: the geometric feature of bilateral symmetry, the mathematical feature of averageness, and the biological feature of secondary sexual characteristics.</p>
+                    <i style="display:flex; justify-content:flex-start">I just want to give an example to the second feature mentioned above. I randomly found this photo in the Internet. This is a typical example of poor averageness of facial features.</i>
+                    <img src="gif.png" alt="logo" style="display:flex; justify-content:flex-start">
+                    <i style="display:flex; justify-content:flex-start;">This gentleman’s face seems ‘ugly’ because of the size of his nose is disproportionately big when compared to his other facial feature, namely, eyes and mouth.</i><br>
+                    <h6 style="text-align:justify;line-height:1.6;margin-bottom:10px;">There was considerable research done on this particular issue and almost all of the conclusions were more or less the same. Almost all of the results showed that if the two individuals of the opposite gender having a strong sexual attraction towards each other tend to beget genetically superior offspring.<br> I have just begun to enter the kernel of this article. The very purpose why I wrote this article will unveil in the following lines. In conservative societies, present in India, China and other parts of Asia, marriage between a guy and a girl is still arranged by their parents and kin. Though in most marriages, the person to be wed decides his or her partner, the profile from which they have to choose is quite narrow because of social constrains. Economic status, religion, caste and other factors come into play in choosing the life partner of a person. Though I am not against any of the above mentioned factors, the fact that irks me is this: almost no or very less importance is given to how much the guy and girl to be wed are PHYSICALLY attracted to each other.</h6>
+                        <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">Not only this happens in arranged marriages, but there are people all over the world, who deliberately overlook the physical attraction factor when choosing their life partners. This, in my personal opinion, is a huge error for more than one reason. As far as I have observed, women tend to make this mistake. When I took effort to find out why, I came to know that they tend to compromise their desire of good looking men for more practical requirements of marriage. They go for men with suitable character or men with a lot of money even if they are not that much physically attractive. In one manner, I condemn this very much because the man who gets married to a woman who is not sufficiently physically attracted to him, is at a receiving end. Such marriages become unstable because of the obvious reasons. Man, who is sexually more demanding (this is an arguable statement in itself), gets frustrated when he does not get to have physical relation as much as he wants. He gets totally pissed off when he finds out that she is not attracted, and never has been attracted to him as much as he thought or wants.I can’t generalize the above statement because a whole lot depends on that man’s sex drive. Women must therefore be true to themselves and merciful to the guy they are choosing to end up with for the good of human gene pool.I don’t want to get too deep into the issue of how much a man’s sex drive depends on the mutual interest shown by his woman, since it does not pertain to the title of this article. Nevertheless, I guess I have thrown some light into the whole issue I was intending to address. Therefore, I will wind up this article now. Well, to all the women out there who want to end up with rich guys, have some heart: spare the man and the unborn kids!</p>
+        </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

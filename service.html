@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Service</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Merriweather', serif;
+            background: #fafafa;
+        }
+        spans {
+            font-size: 22px;
+        }
+        .navbar {
+            position: fixed; 
+            top: 0;
+            width: 100%; 
+            z-index: 2; 
+            background-color:white; 
+            font-weight: 700;
+        }
+        .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #FFD700; 
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+}
+        .navbar-nav .nav-link {
+            color: black;
+            border-radius: 5px;
+            margin-right: 20px; 
+        }
+        .navbar-nav .nav-link:hover {
+            color: #FFD700;
+            font-weight: 600;
+        }
+        .navbar-brand img {
+            height: 50px;
+        }
+        .navbar-toggler {
+            border: none;
+            background-color: skyblue;
+        }
+        .navbar-toggler-icon {
+            color: white;
+        }
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            padding: 20px;
+        }
+        .wrapper h1 {
+            font-size: 2.5em;
+            padding: 25px 0;
+            text-align: center;
+            font-weight: 500;
+        }
+        .content-box {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin-top: 30px;
+        }
+        .card-container {
+            perspective: 1000px;
+        }
+        .card {
+            position: relative;
+            min-height: 422px;
+            width: 313px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: #fff;
+            margin: 10px;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.8s ease-in-out;
+            transform-style: preserve-3d;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 25px 30px rgba(0, 0, 0, 0.3);
+        }
+        .card-content,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 5px; 
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .card-content img {
+            height: 100px;
+        }
+        .card h2 {
+            margin-bottom: 12px;
+            font-weight: 600;
+            text-align: center;
+            color: #282a2c;
+        }
+        .card:hover h2 {
+            color: #fff;
+        }
+        .card:hover p {
+            color: #fff;
+        }
+        .card p {
+            color: #6c757d;
+            text-align: center;
+        }
+        .card:nth-child(1):hover,
+        .card:nth-child(2):hover,
+        .card:nth-child(3):hover,
+        .card:nth-child(4):hover,
+        .card:nth-child(5):hover,
+        .card:nth-child(6):hover {
+            background-color: skyblue;
+        }
+        .card-back {
+            transform: rotateY(180deg);
+            background-color:skyblue;
+            color: #fff;
+            font-weight: 500;
+        }
+        .card.flipped {
+            transform: rotateY(180deg);
+        }
+        button {
+            height: 55px; 
+            width: 100px; 
+            background-color:  rgba(216, 139, 24, 0.678);
+            color: white;
+            font-weight: 400;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            line-height: 45px;         }
+        button:hover {
+            background-color:  rgb(15, 103, 147);
+            transform: scale(1.1);
+            font-weight: 500;
+        }
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: justify; 
+            line-height: 1.6; 
+            margin-bottom: 10px; 
+            width: 60%; 
+            margin: 0 auto; 
+        }
+        h5 {
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        section {
+            padding: 60px 0;
+            overflow: hidden;
+        }
+        .section-title {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+        .section-title h2 {
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            position: relative;
+            color: #45505b;
+        }
+        .section-title h2::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 120px;
+            height: 1px;
+            background: #ddd;
+            bottom: 1px;
+            left: calc(50% - 60px);
+        }
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 40px;
+            height: 3px;
+            background: #0563bb;
+            bottom: 0;
+            left: calc(50% - 20px);
+        }
+        .section-title p {
+            margin-bottom: 0;
+        }
+        @media(max-width:993px) {
+            .wrapper {
+                padding: 25px;
+            }
+            .wrapper h1 {
+                font-size: 2.5em;
+                font-weight: 600;
+            }
+            .content-box {
+                flex-direction: column;
+                width: 100%;
+            }
+            .card {
+                min-width: 300px;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="ZRAE-global-removebg.png" href="index.html" alt="Logo" style="height: 70px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><spans>H</spans>OME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><spans>A</spans>BOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="service.html"><spans>S</spans>ERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consultancy.html"><spans>C</spans>ONSULTANCY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html"><spans>B</spans>LOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><spans>C</spans>ONTACT US</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <div class="col-4">
+                        <div class="submit">
+                          <button type="button" id="form_buttons" onclick="window.location.href='enquire.html'">Enquire</button>
+                        </div>
+                      </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="about" class="about">
+        <div class="wrapper">
+            <div class="section-title"><br>
+                <h2 style="margin-bottom: 30px;">Services</h2>
+                <p>ZRAE delivers the best in class software, hardware and integrated solutions for Your industrial needs.</p>
+            </div>
+            <div class="centered-container">
+                <h5>We develop end to end turn-key solutions for industrial needs with integrated hardware and/or software components. Industrial automation for any process can be implemented with cutting edge robotics and artificial intelligence. Apart from automation, process solutioning and process enhancements can be proposed, simulated and implemented for any given industrial requirement.We works hand in hand with the client throughout this product development lifecycle, taking into account every single requirement of our valuable customers to create the best possible solution that will precisely meet their need.</h5>
+            </div>
+            <div class="content-box">
+                <div class="card-container">
+                    <div class="card" onmouseleave="unflipCard(this)">
+                        <div class="card-content">
+                            <img src="iot-2.jpg" alt="IoT"><br>
+                            <h2 style="font-size: 21px;">INTERNET OF THINGS</h2>
+                            <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">ZRAE is capable of proposing and developing cost effective and competent IoT solution’s to cater to our client’s requirement.</p><br>
+                            <button onclick="flipCard(this)">Read more.....</button>
+                        </div>
+                        <div class="card-back">
+                            <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">Internet of Things (IoT) is one of the most exploited spectrums of technology today that aims at monitoring and controlling everyday common utilities employing the internet. A huge plethora of products have already been developed and is under development in IoT. ZRAE has exhaustive expertise in IoT sector. We are capable of proposing and developing cost effective and competent IoT solution’s to cater to our client’s requirement.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card" onmouseleave="unflipCard(this)">
+                        <div class="card-content">
+                            <img src="Mechatronics.jpg" alt="IoT"><br>
+                            <h2 style="font-size: 21px;">MECHATRONICS</h2>
+                            <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">ZRAE is capable of proposing and developing cost effective and competent IoT solution’s to cater to our client’s requirement.</p><br>
+                            <button onclick="flipCard(this)">Read more.....</button>
+                        </div>
+                        <div class="card-back">
+                            <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">Most of the industrial solutions developed currently are Mechatronics systems that are interdisciplinary by design and operation. ZRAE is capable of designing and developing state of the art mechatronics systems that seamlessly integrate mechanical, electrical, electronics and software components to perform a specific task. We are also capable of building intelligent systems that can be remotely monitored as per the client’s requirements employing Artificial Intelligence and Internet of Things.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card" onmouseleave="unflipCard(this)">
+                        <div class="card-content">
+                            <img src="AI.jpeg" alt="IoT"><br>
+                            <h2 style="font-size: 21px;">AI & ML</h2>
+                            <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">ZRAE is capable of proposing and developing cost effective and competent IoT solution’s to cater to our client’s requirement.</p><br>
+                            <button onclick="flipCard(this)">Read more.....</button>
+                        </div>
+                        <div class="card-back">
+                            <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">Artificial Intelligence and Machine Learning are the latest and the most trending technologies in the current scenario. AI & ML have huge potential to give tremendous insights into almost every spectrum of our lives and hence make it as much better as possible. ZRAE boasts of some of the best AI & ML engineers who are capable of developing powerful intelligent systems that can compete with some of the best similar systems around the world.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card" onmouseleave="unflipCard(this)">
+                        <div class="card-content">
+                            <img src="industrial.jpg" alt="IoT"><br>
+                            <h2 style="font-size: 21px;">AUTOMATION</h2>
+                            <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">ZRAE is capable of proposing and developing cost effective and competent IoT solution’s to cater to our client’s requirement.</p><br>
+                            <button onclick="flipCard(this)">Read more.....</button>
+                        </div>
+                        <div class="card-back">
+                            <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">ZRAE specializes in Industrial Automation both in terms of design and implementation. We can deliver the most cost effective automation solution within the promised deadlines. We provide turn-key process automation solutions for conveyer and non-conveyer systems.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card" onmouseleave="unflipCard(this)">
+                        <div class="card-content">
+                            <img src="automation.jpg" alt="IoT"><br>
+                            <h2 style="font-size: 21px;">ROBOTICS</h2>
+                            <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">ZRAE is capable of proposing and developing cost effective and competent IoT solution’s to cater to our client’s requirement.</p><br>
+                            <button onclick="flipCard(this)">Read more.....</button>
+                        </div>
+                        <div class="card-back">
+                            <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">Robotics is the core area of expertise of ZRAE. We offer integrated robotic solutions for our client’s requirement. Our robotic product is precisely custom made to cater to our client’s need through systematic and meticulous stages of solutioning, design and implementation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card" onmouseleave="unflipCard(this)">
+                        <div class="card-content">
+                            <img src="face.jpg" alt="IoT"><br>
+                            <h2 style="font-size: 21px;">IMAGE PROCESSING & NLP</h2>
+                            <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">ZRAE is capable of proposing and developing cost effective and competent IoT solution’s to cater to our client’s requirement.</p><br>
+                            <button onclick="flipCard(this)">Read more.....</button>
+                        </div>
+                        <div class="card-back">
+                            <p style="text-align:justify;line-height:1.6;margin-bottom:10px;">Image Processing and Natural Language Processing (NLP) are in their entirety employed in Artificial Intelligence to build modern intelligent systems. Chatbots and other intelligent interactive systems employ NLP to communicate with humans. Image Processing is now exhaustively being applied for medical science and security applications. ZRAE have comprehensive know-how and experience to build Image Processing and NLP systems to suit our customer’s needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function flipCard(button) {
+            var card = button.closest('.card');
+            card.classList.add('flipped');
+        }
+        function unflipCard(card) {
+            card.classList.remove('flipped');
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
