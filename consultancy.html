@@ -20,12 +20,19 @@
         }
         .navbar {
             position: fixed; 
-            top: 0; 
-            width: 100%;
+            top: 0;
+            width: 100%; 
             z-index: 2; 
             background-color:white; 
             font-weight: 700;
         }
+        .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #FFD700; 
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+}
         .navbar-nav .nav-link {
             color: black;
             border-radius: 5px;
@@ -35,15 +42,8 @@
             color: #FFD700;
             font-weight: 600;
         }
-        .navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-    color: #FFD700; 
-    font-weight: 500;
-    background-color: transparent; 
-    border: none; 
-}
         .navbar-brand img {
-            height: 50px; 
+            height: 50px;
         }
         .navbar-toggler {
             border: none;
@@ -78,7 +78,7 @@
         }
         .card {
             position: relative;
-            min-height: 530px;
+            min-height: 422px;
             width: 313px;
             border-radius: 5px;
             display: flex;
@@ -109,7 +109,7 @@
             flex-direction: column;
         }
         .card-content img {
-            height: 100px;   
+            height: 100px;
         }
         .card h2 {
             margin-bottom: 12px;
@@ -157,8 +157,7 @@
             display: flex; 
             justify-content: center; 
             align-items: center; 
-            line-height: 45px; 
-        }
+            line-height: 45px;         }
         button:hover {
             background-color:  rgb(15, 103, 147);
             transform: scale(1.1);
@@ -171,14 +170,17 @@
             text-align: justify; 
             line-height: 1.6; 
             margin-bottom: 10px; 
-            width: 60%; 
-            margin: 0 auto; 
+            width: 100%; /* Changed to full width */
+            padding: 0 15px; /* Added padding for mobile */
         }
+        
         h5 {
             text-align: justify;
             line-height: 1.6;
             margin-bottom: 10px;
             font-size: 18px;
+            width: 100%; /* Ensures it takes full width */
+            padding: 0 15px; /* Add padding for better spacing */
         }
         section {
             padding: 60px 0;
@@ -225,10 +227,10 @@
                 padding: 25px;
             }
             button {
-                width: 90%; /* Slightly smaller width on mobile for padding */
-                margin: 10px auto; /* Center the button on mobile */
-                font-size: 16px; /* Increase font size for better readability */
+                height: 50px;
+                width: 140px; /* Increase font size for better readability */
             }
+            
             .wrapper h1 {
                 font-size: 2.5em;
                 font-weight: 600;
@@ -241,6 +243,19 @@
                 min-width: 430px;
                 margin: 10px auto;
             }
+            .navbar-toggler {
+                border: none;
+                background-color: skyblue;
+            }
+            .navbar-toggler-icon {
+                color: white;
+            }
+            h5 {
+                font-size: 16px; /* Adjust font size for smaller screens */
+                padding: 0 10px; 
+                width: 100%;/* Less padding on small screens */
+            }
+            
            
         }
     </style>
