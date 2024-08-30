@@ -11,139 +11,46 @@
             margin: 0;
             padding: 0;
         }
-
         body {
             font-family: 'Merriweather', serif;
             background: #fafafa;
         }
-         
+        spans {
+            font-size: 22px;
+        }
         .navbar {
             position: fixed; 
-            top: 0; 
-            width: 100%;
+            top: 0;
+            width: 100%; 
             z-index: 2; 
             background-color:white; 
             font-weight: 700;
         }
+        .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #FFD700; 
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+}
         .navbar-nav .nav-link {
             color: black;
             border-radius: 5px;
             margin-right: 20px; 
         }
-        .navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-    color: #FFD700; 
-    font-weight: 600;
-    background-color: transparent; 
-    border: none; 
-}
         .navbar-nav .nav-link:hover {
             color: #FFD700;
             font-weight: 600;
         }
-        button {
-            height: 55px; 
-            width: 100px; 
-            background-color:  rgba(216, 139, 24, 0.678);
-            color: white;
-            font-weight: 400;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            display: flex;
-            justify-content: center; 
-            align-items: center; 
-            line-height: 45px; 
-        }
-        .centered-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: justify; 
-            line-height: 1.6; 
-            margin-bottom: 10px; 
-            width: 60%; 
-            margin: 0 auto; 
-        }
-
-        /* Additional styling for the paragraph */
-        h5 {
-            text-align: justify;
-            line-height: 1.6;
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-        section {
-            padding: 60px 0;
-            overflow: hidden;
-        }
-
-        .section-title {
-            text-align: center;
-            padding-bottom: 30px;
-        }
-
-        .section-title h2 {
-            font-size: 32px;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            position: relative;
-            color: #45505b;
-        }
-
-        .section-title h2::before {
-            content: "";
-            position: absolute;
-            display: block;
-            width: 120px;
-            height: 1px;
-            background: #ddd;
-            bottom: 1px;
-            left: calc(50% - 60px);
-        }
-
-        .section-title h2::after {
-            content: "";
-            position: absolute;
-            display: block;
-            width: 40px;
-            height: 3px;
-            background: #0563bb;
-            bottom: 0;
-            left: calc(50% - 20px);
-        }
-        
-        .section-title p {
-            margin-bottom: 0;
-        }
-        button:hover {
-            background-color:  rgb(15, 103, 147);
-            transform: scale(1.1);
-            font-weight: 500;
-        }
-        /* Navbar text hover color */
-        .navbar-nav .nav-link:hover {
-            color: #FFD700;
-            font-weight: 600;
-        }
-
-        /* Logo */
         .navbar-brand img {
-            height: 50px; /* Adjust height as needed */
+            height: 50px;
         }
-        
-        /* Adjust menu button (hamburger) position */
         .navbar-toggler {
             border: none;
             background-color: skyblue;
-            /* No background for the toggle button */
         }
         .navbar-toggler-icon {
             color: white;
-             /* White color for the toggle icon */
         }
         .wrapper {
             display: flex;
@@ -153,7 +60,6 @@
             width: 100%;
             padding: 20px;
         }
-
         .wrapper h1 {
             font-size: 2.5em;
             padding: 25px 0;
@@ -167,24 +73,12 @@
             max-width: 1000px;
             margin-top: 30px;
         }
-
         .card-container {
             perspective: 1000px;
         }
-        .btn{
-            border: 2px solid rgb(35, 113, 192);
-            border-radius: 5px;;
-            color: black;
-            font-weight: 400;
-        }
-        .btn:hover{
-            background-color: black;
-            color: white;
-            font-weight: 400;
-        }
         .card {
             position: relative;
-            min-height: 400px;
+            min-height: 422px;
             width: 313px;
             border-radius: 5px;
             display: flex;
@@ -197,12 +91,10 @@
             transition: transform 0.8s ease-in-out;
             transform-style: preserve-3d;
         }
-
         .card:hover {
             transform: scale(1.05);
             box-shadow: 0px 25px 30px rgba(0, 0, 0, 0.3);
         }
-
         .card-content,
         .card-back {
             position: absolute;
@@ -216,32 +108,25 @@
             align-items: center;
             flex-direction: column;
         }
-
         .card-content img {
             height: 100px;
-            
         }
-
         .card h2 {
             margin-bottom: 12px;
             font-weight: 600;
             text-align: center;
             color: #282a2c;
         }
-
         .card:hover h2 {
             color: #fff;
         }
-
         .card:hover p {
             color: #fff;
         }
-
         .card p {
             color: #6c757d;
             text-align: center;
         }
-
         .card:nth-child(1):hover,
         .card:nth-child(2):hover,
         .card:nth-child(3):hover,
@@ -250,26 +135,111 @@
         .card:nth-child(6):hover {
             background-color: skyblue;
         }
-
         .card-back {
             transform: rotateY(180deg);
             background-color:skyblue;
             color: #fff;
             font-weight: 500;
         }
-
         .card.flipped {
             transform: rotateY(180deg);
         }
+        button {
+            height: 55px; 
+            width: 100px; 
+            background-color:  rgba(216, 139, 24, 0.678);
+            color: white;
+            font-weight: 400;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            line-height: 45px;         }
+        button:hover {
+            background-color:  rgb(15, 103, 147);
+            transform: scale(1.1);
+            font-weight: 500;
+        }
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: justify; 
+            line-height: 1.6; 
+            margin-bottom: 10px; 
+            width: 100%; /* Changed to full width */
+            padding: 0 15px; /* Added padding for mobile */
+        }
+        
+        h5 {
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            font-size: 18px;
+            width: 100%; /* Ensures it takes full width */
+            padding: 0 15px; /* Add padding for better spacing */
+        }
+        section {
+            padding: 60px 0;
+            overflow: hidden;
+        }
+        .section-title {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+        .section-title h2 {
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            position: relative;
+            color: #45505b;
+        }
+        .section-title h2::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 120px;
+            height: 1px;
+            background: #ddd;
+            bottom: 1px;
+            left: calc(50% - 60px);
+        }
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 40px;
+            height: 3px;
+            background: #0563bb;
+            bottom: 0;
+            left: calc(50% - 20px);
+        }
+        .section-title p {
+            margin-bottom: 0;
+        }
+        .btn{
+             border: 2px solid rgb(35, 113, 192);
+             border-radius: 5px;
+             color: black;
+            font-weight: 400;}
+            .btn:hover{ 
+            background-color: black;
+            color: white;
+            font-weight: 400;}
         @media(max-width:993px) {
             .wrapper {
                 padding: 25px;
             }
             button {
-                width: 90%; /* Slightly smaller width on mobile for padding */
-                margin: 10px auto; /* Center the button on mobile */
-                font-size: 16px; /* Increase font size for better readability */
+                height: 50px;
+                width: 140px; /* Increase font size for better readability */
             }
+            
             .wrapper h1 {
                 font-size: 2.5em;
                 font-weight: 600;
@@ -279,9 +249,23 @@
                 width: 100%;
             }
             .card {
-                min-width: 430px;
+                min-width: 350px;
+                min-height: 520px;
                 margin: 10px auto;
             }
+            .navbar-toggler {
+                border: none;
+                background-color: skyblue;
+            }
+            .navbar-toggler-icon {
+                color: white;
+            }
+            h5 {
+                font-size: 16px; /* Adjust font size for smaller screens */
+                padding: 0 10px; 
+                width: 100%;/* Less padding on small screens */
+            }
+            
            
         }
     </style>
