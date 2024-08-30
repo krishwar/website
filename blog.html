@@ -18,33 +18,32 @@
         }
          
         .navbar {
-            position: fixed; /* Change to fixed */
-            top: 0; /* Ensure it is at the top */
-            width: 100%; /* Full width */
-            z-index: 2; /* Keep it above other content */
-            background-color:white; /* Optional: Add semi-transparent background */
+            position: fixed; 
+            top: 0; 
+            width: 100%;
+            z-index: 2; 
+            background-color:white; 
             font-weight: 700;
         }
         .navbar-nav .nav-link {
             color: black;
             border-radius: 5px;
-            margin-right: 20px; /* 25px margin between each link */
+            margin-right: 20px; 
         }
         .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #FFD700; /* Yellow text color */
+    color: #FFD700; 
     font-weight: 600;
-    background-color: transparent; /* Ensure background is transparent */
-    border: none; /* Remove any borders if present */
+    background-color: transparent; 
+    border: none; 
 }
-        /* Navbar text hover color */
         .navbar-nav .nav-link:hover {
             color: #FFD700;
             font-weight: 600;
         }
         button {
-            height: 55px; /* Adjust the height as needed */
-            width: 100px; /* Keep the width as desired */
+            height: 55px; 
+            width: 100px; 
             background-color:  rgba(216, 139, 24, 0.678);
             color: white;
             font-weight: 400;
@@ -52,20 +51,20 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
-            display: flex; /* Ensures the button takes up the specified height */
-            justify-content: center; /* Centers text horizontally */
-            align-items: center; /* Centers text vertically */
-            line-height: 45px; /* Set line-height equal to height for vertical centering */
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            line-height: 45px; 
         }
         .centered-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: justify; /* Ensure text is justified */
-            line-height: 1.6; /* Improve readability */
-            margin-bottom: 10px; /* Space below the paragraph */
-            width: 60%; /* Adjust width as needed */
-            margin: 0 auto; /* Center the container horizontally */
+            text-align: justify; 
+            line-height: 1.6; 
+            margin-bottom: 10px; 
+            width: 60%; 
+            margin: 0 auto; 
         }
 
         /* Additional styling for the paragraph */
@@ -262,12 +261,35 @@
         .card.flipped {
             transform: rotateY(180deg);
         }
+        @media(max-width:993px) {
+            .wrapper {
+                padding: 25px;
+            }
+            button {
+                width: 90%; /* Slightly smaller width on mobile for padding */
+                margin: 10px auto; /* Center the button on mobile */
+                font-size: 16px; /* Increase font size for better readability */
+            }
+            .wrapper h1 {
+                font-size: 2.5em;
+                font-weight: 600;
+            }
+            .content-box {
+                flex-direction: column;
+                width: 100%;
+            }
+            .card {
+                min-width: 430px;
+                margin: 10px auto;
+            }
+           
+        }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="navbar">
         <div class="container-fluid">
-            <!-- Logo on the left side -->
+
             <a class="navbar-brand" href="#">
                 <img src="ZRAE-global-removebg.png" href="index.html" alt="Logo" style="height: 70px;">
             </a>
@@ -276,7 +298,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
-                    <!-- Navigation links with 25px margin between them -->
                     <li class="nav-item">
                         <a class="nav-link" href="index.html"><spans>H</spans>OME</a>
                     </li>
@@ -321,8 +342,7 @@
                                     <a href="blog1.html" class="btn">Read more.....</a>
                                 </div>
                             </div>
-                        </div>
-                        
+                        </div>                 
                     </div>
                     <div class="card-container">
                         <div class="card-container">

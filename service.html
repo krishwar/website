@@ -170,14 +170,17 @@
             text-align: justify; 
             line-height: 1.6; 
             margin-bottom: 10px; 
-            width: 60%; 
-            margin: 0 auto; 
+            width: 100%; /* Changed to full width */
+            padding: 0 15px; /* Added padding for mobile */
         }
+        
         h5 {
             text-align: justify;
             line-height: 1.6;
             margin-bottom: 10px;
             font-size: 18px;
+            width: 100%; /* Ensures it takes full width */
+            padding: 0 15px; /* Add padding for better spacing */
         }
         section {
             padding: 60px 0;
@@ -223,6 +226,11 @@
             .wrapper {
                 padding: 25px;
             }
+            button {
+                height: 50px;
+                width: 140px; /* Increase font size for better readability */
+            }
+            
             .wrapper h1 {
                 font-size: 2.5em;
                 font-weight: 600;
@@ -232,9 +240,23 @@
                 width: 100%;
             }
             .card {
-                min-width: 300px;
+                min-width: 430px;
                 margin: 10px auto;
             }
+            .navbar-toggler {
+                border: none;
+                background-color: skyblue;
+            }
+            .navbar-toggler-icon {
+                color: white;
+            }
+            h5 {
+                font-size: 16px; /* Adjust font size for smaller screens */
+                padding: 0 10px; 
+                width: 100%;/* Less padding on small screens */
+            }
+            
+           
         }
     </style>
 </head>
@@ -282,10 +304,10 @@
         <div class="wrapper">
             <div class="section-title"><br>
                 <h2 style="margin-bottom: 30px;">Services</h2>
-                <p>ZRAE delivers the best in class software, hardware and integrated solutions for Your industrial needs.</p>
+                <p > ZRAE delivers the best in class software, hardware and integrated solutions for Your industrial needs.</p>
             </div>
             <div class="centered-container">
-                <h5>We develop end to end turn-key solutions for industrial needs with integrated hardware and/or software components. Industrial automation for any process can be implemented with cutting edge robotics and artificial intelligence. Apart from automation, process solutioning and process enhancements can be proposed, simulated and implemented for any given industrial requirement.We works hand in hand with the client throughout this product development lifecycle, taking into account every single requirement of our valuable customers to create the best possible solution that will precisely meet their need.</h5>
+                <h5>We develop end to end turn-key solutions for industrial needs with integrated hardware and/or software components. Industrial automation for any process can be implemented with cutting-edge robotics and artificial intelligence. Apart from automation, process solutioning and process enhancements can be proposed, simulated, and implemented for any given industrial requirement. We work hand in hand with the client throughout this product development lifecycle, taking into account every single requirement of our valuable customers to create the best possible solution that will precisely meet their needs.</h5>
             </div>
             <div class="content-box">
                 <div class="card-container">
