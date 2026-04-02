@@ -20,15 +20,8 @@ Build a strong digital presence
 🛠️ Tech Stack
 Frontend: HTML, CSS, JavaScript
 Styling: CSS
-Deployment: GitHub Pages / Netlify (optional)
-📁 Project Structure
-website/
-│
-├── index.html        # Main landing page
-├── css/              # Stylesheets
-├── js/               # JavaScript files
-├── assets/           # Images and resources
-├── pages/            # Additional pages (About, Services, Contact)
+Deployment: GitHub Pages / Netlify (optional) 
+
 ⚙️ Installation & Setup
 1️⃣ Clone the repository
 git clone https://github.com/krishwar/website.git
@@ -52,4 +45,4 @@ This website is suitable for:
 Startups
 Small businesses
 Service-based companies
-Corporate landing pages
+Corporate landing pages.
