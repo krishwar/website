@@ -18,10 +18,9 @@ Build a strong digital presence
 🎨 Clean and structured UI
 📱 Fully responsive design (mobile + desktop)
 🛠️ Tech Stack
-Category	Technology
-Frontend	HTML, CSS, JavaScript
-Styling	CSS
-Deployment	GitHub Pages / Netlify (optional)
+Frontend: HTML, CSS, JavaScript
+Styling: CSS
+Deployment: GitHub Pages / Netlify (optional)
 📁 Project Structure
 website/
 │
