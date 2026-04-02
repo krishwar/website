@@ -23,26 +23,37 @@ Styling: CSS
 Deployment: GitHub Pages / Netlify (optional) 
 
 ⚙️ Installation & Setup
+
 1️⃣ Clone the repository
-git clone https://github.com/krishwar/website.git
-cd website
+
+git clone https://github.com/krishwar/website.git   cd website
+
 2️⃣ Run the project
 
 Simply open:
 
 index.html
+
 🌍 Deployment
+
 
 This project can be deployed using:
 
 GitHub Pages
+
 Netlify
+
 Vercel
+
+
 📌 Use Case
 
 This website is suitable for:
 
 Startups
+
 Small businesses
+
 Service-based companies
+
 Corporate landing pages.
